@@ -116,23 +116,27 @@ function App() {
           catchAll={<ErrorComponent />}
           resources={[
             {
-              name: "Property",
-              list: MuiInferencer,
+              name: "properties",
+              list: AllProperties,
+              show: PropertyDetails,
+              create: CreateProperty,
+              edit: EditProperty,
               icon: <VillaOutlined />,
             },
             {
-              name: "Agent",
-              list: MuiInferencer,
+              name: "agents",
+              list: Agents,
+              show: AgentProfile,
               icon: <PeopleAltOutlined />,
             },
             {
-              name: "Review",
-              list: MuiInferencer,
+              name: "reviews",
+              list: Home,
               icon: <StarOutlineRounded />,
             },
             {
-              name: "message",
-              list: MuiInferencer,
+              name: "messages",
+              list: Home,
               icon: <ChatBubbleOutline />,
             },
             {
@@ -140,7 +144,7 @@ function App() {
               options: {
                 label: "My Profile",
               },
-              list: MuiInferencer,
+              list: MyProfile,
               icon: <AccountCircleOutlined />,
             },
           ]}
