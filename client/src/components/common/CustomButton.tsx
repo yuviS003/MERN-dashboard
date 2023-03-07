@@ -4,6 +4,7 @@ import { Button } from "@pankod/refine-mui";
 import { CustomButtonProps } from "interfaces/common";
 
 const CustomButton = ({
+  disabled,
   title,
   handleClick,
   backgroundColor,
@@ -32,6 +33,7 @@ const CustomButton = ({
         },
       }}
       onClick={handleClick}
+      disabled={disabled}
     >
       {icon}
       {title}
