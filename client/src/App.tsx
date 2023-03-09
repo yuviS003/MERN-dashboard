@@ -37,6 +37,11 @@ import {
   VillaOutlined,
 } from "@mui/icons-material";
 
+// For local development, set this to
+// const API_BASE_URI = "http://localhost:8080";
+
+const API_BASE_URI = "https://refine-dashboard-8nzz.onrender.com";
+
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
   const token = localStorage.getItem("token");
@@ -58,7 +63,7 @@ function App() {
 
       // Save user to MongoDB
       if (profileObj) {
-        const response = await fetch(`http://localhost:8080/api/v1/users`, {
+        const response = await fetch(`${API_BASE_URI}/api/v1/users`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -125,7 +130,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:8080/api/v1")}
+          dataProvider={dataProvider(`${API_BASE_URI}/api/v1`)}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
