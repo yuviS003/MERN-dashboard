@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const agentProfile = () => {
+const AgentProfile = () => {
   return <div>agentProfile</div>;
-}
+};
 
-export default agentProfile
+export default AgentProfile;
