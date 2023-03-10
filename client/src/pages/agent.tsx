@@ -4,7 +4,11 @@ import { AgentCard } from "components";
 import { Box, Typography } from "@pankod/refine-mui";
 
 const Agent = () => {
-  const { data, isLoading, isError } = useList({ resource: "users" });
+  const { 
+    data, 
+    // isLoading, 
+    // isError 
+  } = useList({ resource: "users" });
 
   const allAgents = data?.data ?? [];
   console.log(allAgents);

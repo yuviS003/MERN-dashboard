@@ -7,7 +7,7 @@ import {
   PropertyReferrals,
   TotalRevenue,
   PropertyCard,
-  TopAgent,
+  // TopAgent,
 } from "../components";
 import { useList } from "@pankod/refine-core";
 
